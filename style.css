@@ -1,0 +1,278 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --base-font: "Mulish", sans-serif;
+
+  /* Colors */
+
+  --white: #ffffff;
+  --text-color: #312D64;
+  --title-color: #B52184;
+  --light-gray-background: #F9F4FB;
+  --gradient-background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+}
+
+body {
+  width: max(43rem, 100%);
+  font-family: var(--base-font);
+  font-size: 1.6rem;
+  margin: 0 auto;
+}
+
+.container {
+  background-color: var(--light-gray-background);
+}
+
+/* Typography */
+
+h1, h2 {
+  color: var(--title-color);
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+h3 {
+  color: var(--title-color);
+  font-size: 2.9rem;
+  font-weight: 900;
+}
+
+p {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Form */
+button,
+input,
+fieldset,
+textarea {
+  border: none;
+  background: none;
+  font-family: var(--base-font);
+}
+
+/* Hero Section */
+
+#hero {
+  padding: 0 3.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.astronaut img {
+  width: 100%;
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-cta h1 {
+  margin: 1.6rem 0 0;
+}
+
+.hero-cta a {
+  margin: 3.6rem 0 9.4rem;
+  transition: filter 1s;
+}
+
+.hero-cta p {
+  font-size: 2rem;
+}
+
+.hero-cta a:hover {
+  filter: hue-rotate(-60deg);
+}
+
+/* Cards Section */
+
+.cards-container {
+  background: var(--gradient-background);
+}
+
+#cards {
+  margin: 0 auto;
+  padding: 5.4rem 3.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.card {
+  background-color: var(--white);
+  padding: 2.6rem;
+  border-radius: 2rem;
+}
+
+.card-details {
+  width: max(26.5rem, 80%);
+}
+
+.card-details h3 {
+  margin: 3rem 0 2rem;
+}
+
+/* Contact Section */
+
+#contact {
+  padding: 7.8rem 4rem 6.5rem;
+}
+
+#contact form h2 {
+  margin-bottom: 4.4rem;
+}
+
+#contact form .input-wrapper {
+  width: 100%;
+  margin-bottom: 2.4rem;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  padding: 1.2rem 1.6rem 1.6rem;
+  border: 0.2rem solid var(--text-color);
+  color: var(--text-color);
+  font-weight: 600;
+  border-radius: 1.6rem;
+  font-size: 1.6rem;
+}
+
+#contact form input {
+  padding-left: 4.8rem;
+}
+
+#contact form textarea {
+  height: 12.8rem;
+  resize: none;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+#name {
+  background: url(./images/person-icon.png) no-repeat scroll 1.4rem 1.2rem;
+}
+
+#email {
+  background: url(./images/at-icon.png) no-repeat scroll 1.4rem 1.2rem;
+}
+
+#contact form button {
+  background: var(--gradient-background);
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  cursor: pointer;
+  transition: filter .3s;
+}
+
+#contact form button:hover {
+  filter: brightness(1.2);
+}
+
+/* footer */
+
+footer {
+background: var(--gradient-background);
+}
+
+footer p {
+  color: var(--white);
+  font-size: 2rem;
+  padding: 3.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (min-width: 1440px) {
+
+  /* Hero */
+  #hero {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3rem 10.4rem 10.9rem;
+    max-height: 83.6rem;
+    width: min(144rem, 100%);
+    margin: 0 auto;
+  }
+
+  .hero-cta {
+    order: 1;
+    align-items: flex-start;
+    margin-top: 32rem;
+  }
+
+  .astronaut {
+    order: 2;
+  }
+
+  #hero h1 {
+    font-size: 5.8rem;
+  }
+
+  #hero p {
+    font-size: 3.2rem;
+  }
+
+  #hero a {
+    margin-top: 20rem;
+  }
+
+  /* Cards */
+
+  #cards {
+    width: min(144rem, 100%);
+    flex-direction: row;
+    gap: 6rem;
+    justify-content: center;
+    padding: 6.4rem 11.1rem;
+  }
+
+  .card {
+    width: 36.6rem;
+  }
+
+  /* Contact */
+
+  #contact {
+    display: flex;
+    width: min(144rem, 100%);
+    margin: 0 auto;
+    padding: 9.5rem 0 9.5rem 10.9rem;
+    height: 61.2rem;
+  }
+
+  .contact-container {
+    background: url(./images/stars.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  #contact form {
+    width: 56rem;
+  }
+}
+
+
+
+
